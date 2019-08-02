@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<!--头部-->
+<head>
+    {% block head %}
+<meta charset="utf-8">
+<title>首页_大江个人博客 </title>
+<meta name="keywords" content="个人博客,大江个人博客,个人博客模板,大江" />
+<meta name="description" content="大江个人博客，是一个有关程序编程知识分享的个人网站，提供一些免费学习资料和技术分享的个人网站" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/m.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.easyfader.min.js') }}"></script>
+<!--[if lt IE 9]>
+<script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+<![endif]-->
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+</head>
+{% endblock %}
+<body>
+{% block nav %}
+<header>
+  <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="index.html">网站首页</a></li>
+      <li><a href="about.html">关于我</a></li>
+      <li><a href="share.html">模板分享</a></li>
+      <li><a href="list.html">学无止境</a></li>
+      <li><a href="list.html">慢生活</a></li>
+      <li><a href="link.html">博客导航</a></li>
+      <li><a href="gbook.html">留言</a></li>
+    </ul>
+  </div>
+  <div class="topnav">
+    <nav>
+      <ul>
+      <li><a href="index.html">网站首页</a></li>
+      <li><a href="about.html">关于我</a></li>
+      <li><a href="share.html">模板分享</a></li>
+      <li><a href="list.html">学无止境</a></li>
+      <li><a href="list.html">慢生活</a></li>
+      <li><a href="link.html">博客导航</a></li>
+      <li><a href="gbook.html">留言</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+{% endblock %}
+{% block content %}
+<!--内容-->
+{% endblock %}
+
+{% block footer %}
+<!--尾部-->
+<footer>
+  <p>Design by <a href="/">大江个人博客</a> <a href="/">备案号</a></p>
+</footer>
+{% endblock %}
+</body>
+</html>
