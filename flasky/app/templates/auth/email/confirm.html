@@ -1,0 +1,8 @@
+<p>亲爱的 {{ user.username }},</p>
+<p>欢迎来到 <b>大江博客</b>!</p>
+<p>请验证您的账号 <a href="{{ url_for('auth.confirm', token=token, _external=True) }}">click here</a>.</p>
+<p>你也可以直至复制以下链接</p>
+<p>{{ url_for('auth.confirm', token=token, _external=True) }}</p>
+<p>Sincerely,</p>
+<p>The dajiang Team</p>
+<p><small>Note: replies to this email address are not monitored.</small></p>
