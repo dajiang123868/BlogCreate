@@ -16,7 +16,7 @@ class Config:
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD','ufbwbqgrfzhzehgc')
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <1661891049@qq.com>'
-    FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN','1661891049@qq.com')
+    FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
     # 将其设为 True时，每次请求结束后都会自动提交数据库中的变动
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

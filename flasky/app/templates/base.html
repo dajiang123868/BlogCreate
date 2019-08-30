@@ -38,7 +38,7 @@ window.onload = function ()
     <nav>
       <ul>
         {% block nav %}
-      <li><a href="index.html">网站首页</a></li>
+      <li><a href="{{ url_for('main.index')}}">网站首页</a></li>
       <li><a href="about.html">关于我</a></li>
       <li><a href="share.html">模板分享</a></li>
       <li><a href="list.html">优秀博文</a></li>
